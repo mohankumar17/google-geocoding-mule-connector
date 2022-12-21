@@ -1,0 +1,15 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:geocoding="http://www.mulesoft.org/schema/mule/geocoding"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/geocoding http://www.mulesoft.org/schema/mule/geocoding/current/mule-geocoding.xsd">
+
+	<geocoding:config name="config" configId="configId">
+		<geocoding:connection requiredParameter="aValue" />
+	</geocoding:config>
+
+	<flow name="cordsFlow">
+		<geocoding:get-cords address="Banglore" />
+	</flow>
+
+</mule>
